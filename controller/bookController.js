@@ -198,13 +198,21 @@ exports.paymentController = async (req, res) => {
             //payment type
             payment_method_types: ["card"],
             //details of the product
-            line_items:line_item,
+            line_items: line_item,
             //mode of payment
             mode: 'payment',
+            //   server
             //payment is successful
-            success_url: "http://localhost:5173/payment-success",
+            success_url: "https://bookstore-frontend-two-omega.vercel.app/payment-success",
             //payment is cancel
-            cancel_url: "http://localhost:5173/payment-error"
+            cancel_url: "https://bookstore-frontend-two-omega.vercel.app/payment-error"
+
+
+            //local dev
+            //  //payment is successful
+            // success_url: "http://localhost:5173/payment-success",
+            // //payment is cancel
+            // cancel_url: "http://localhost:5173/payment-error"
         });
         console.log(session);
         // res.status(200).json({sessionId:session.id})
